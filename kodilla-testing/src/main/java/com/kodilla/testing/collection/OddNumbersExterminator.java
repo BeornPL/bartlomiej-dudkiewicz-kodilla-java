@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class OddNumbersExterminator {
 
     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers) {
-        if (numbers.isEmpty()) {
-            return null;
-        }
-
         ArrayList<Integer> evenNumbers = new ArrayList<>();
+
+        if (numbers.isEmpty()) {
+            return evenNumbers;
+        }
 
         for (int i=0; i<numbers.size(); i++) {
             Integer n = numbers.get(i);
