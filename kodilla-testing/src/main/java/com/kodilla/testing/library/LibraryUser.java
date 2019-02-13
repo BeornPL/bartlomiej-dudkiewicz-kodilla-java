@@ -7,7 +7,6 @@ public class LibraryUser {
     String firstname;
     String lastname;
     String peselId;
-    List<Book> borrowedBooks= new ArrayList<Book>();
 
     public LibraryUser(String firstname, String lastname, String peselId) {
         this.firstname = firstname;
@@ -25,10 +24,6 @@ public class LibraryUser {
 
     public String getPeselId() {
         return peselId;
-    }
-
-    public List<Book> getBorrowedBooks() {
-        return borrowedBooks;
     }
 
     @Override
@@ -56,13 +51,5 @@ public class LibraryUser {
         result = 31 * result + lastname.hashCode();
         result = 31 * result + peselId.hashCode();
         return result;
-    }
-
-    public boolean borrowBook(Book book) {
-        return borrowedBooks.add(book);
-    }
-
-    public boolean returnBook(Book book) {
-        return borrowedBooks.remove(book);
     }
 }

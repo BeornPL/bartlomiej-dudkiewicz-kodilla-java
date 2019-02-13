@@ -97,8 +97,7 @@ public class BookDirectoryTestSuite {
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser libraryUser = new LibraryUser("First name", "Last name", "0000");
-        borrowNBook(libraryUser, 1);
-        List<Book> resultList = libraryUser.getBorrowedBooks();
+        List<Book> resultList = generateListOfNBooks(1);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultList);
 
         //When
@@ -114,8 +113,7 @@ public class BookDirectoryTestSuite {
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser libraryUser = new LibraryUser("First name", "Last name", "0000");
-        borrowNBook(libraryUser, 5);
-        List<Book> resultList = libraryUser.getBorrowedBooks();
+        List<Book> resultList = generateListOfNBooks(5);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultList);
 
         //When
@@ -132,12 +130,5 @@ public class BookDirectoryTestSuite {
             resultList.add(theBook);
         }
         return resultList;
-    }
-
-    private void borrowNBook(LibraryUser libraryUser, int booksQuantity) {
-        for(int n = 1; n <= booksQuantity; n++){
-            Book theBook = new Book("Title " + n, "Author " + n, 1970 + n);
-            libraryUser.borrowBook(theBook);
-        }
     }
 }

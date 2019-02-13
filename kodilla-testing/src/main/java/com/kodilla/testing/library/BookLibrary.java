@@ -20,8 +20,7 @@ public class BookLibrary {
     }
 
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
-        List<Book> bookList = new ArrayList<Book>();
-        bookList = libraryUser.getBorrowedBooks();
+        List<Book> bookList = libraryDatabase.listBooksInHandsOf(libraryUser);
 
         return bookList;
     }
