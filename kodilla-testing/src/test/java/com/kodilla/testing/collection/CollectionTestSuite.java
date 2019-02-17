@@ -26,7 +26,7 @@ public class CollectionTestSuite {
             //When
             ArrayList<Integer> result = oddNumbersExterminator.exterminate(new ArrayList<Integer>());
             //Then
-            Assert.assertTrue(result == null);
+            Assert.assertEquals(0, result.size());
     }
 
     @Test
