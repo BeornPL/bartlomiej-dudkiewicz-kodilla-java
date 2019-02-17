@@ -8,6 +8,7 @@ public class StreamMain71 {
 
         poemBeautifier.beautify("Text1", (a) -> "ABC "+a+" ABC");
         poemBeautifier.beautify("Text2", (a) -> a.toUpperCase());
+        poemBeautifier.beautify("abcdefghijk", String::toUpperCase);
         poemBeautifier.beautify("Text3", (a) -> a.substring(2,a.length()-2));
         poemBeautifier.beautify("Text4", (a) -> a.substring(0,3).toUpperCase()+a.substring(2));
     }
