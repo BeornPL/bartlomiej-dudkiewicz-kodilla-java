@@ -1,6 +1,7 @@
 package com.kodilla.food2door;
 
 import com.kodilla.food2door.products.Order;
+import com.kodilla.food2door.products.OrderProcessor;
 import com.kodilla.food2door.products.OrderRetriever;
 
 public class Application {
@@ -8,10 +9,6 @@ public class Application {
         OrderRetriever orderRetriever = new OrderRetriever();
         Order order = orderRetriever.retrieve();
 
-        if (order.getVendor().process(order)) {
-            System.out.println("Order processed.");
-        } else {
-            System.out.println("Error processing the order.");
-        }
+        OrderProcessor.process(order);
     }
 }
