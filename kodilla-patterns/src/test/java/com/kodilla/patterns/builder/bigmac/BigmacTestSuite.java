@@ -8,12 +8,12 @@ public class BigmacTestSuite {
     public void testBigmacBuilder() {
         //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()
-                .Bun("roll")
-                .Burgers((short) 3)
-                .Sauce("Barbecue")
-                .Ingredients("Bacon")
-                .Ingredients("Cheddar")
-                .Ingredients("Chili")
+                .bun("roll")
+                .burgers((short) 3)
+                .sauce("Barbecue")
+                .ingredients("Bacon")
+                .ingredients("Cheddar")
+                .ingredients("Chili")
                 .build();
         System.out.println(bigmac);
 

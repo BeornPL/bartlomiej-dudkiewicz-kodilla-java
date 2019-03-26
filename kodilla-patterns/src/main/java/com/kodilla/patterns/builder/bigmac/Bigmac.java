@@ -15,22 +15,22 @@ public class Bigmac {
         private String sauce;
         private List<String> ingredients = new ArrayList<>();
 
-        public BigmacBuilder Bun(String bun) {
+        public BigmacBuilder bun(String bun) {
             this.bun = bun;
             return this;
         }
 
-        public BigmacBuilder Burgers(short burgers) {
+        public BigmacBuilder burgers(short burgers) {
             this.burgers = burgers;
             return this;
         }
 
-        public BigmacBuilder Sauce(String sauce) {
+        public BigmacBuilder sauce(String sauce) {
             this.sauce = sauce;
             return this;
         }
 
-        public BigmacBuilder Ingredients(String ingredient) {
+        public BigmacBuilder ingredients(String ingredient) {
             this.ingredients.add(ingredient);
             return this;
         }
