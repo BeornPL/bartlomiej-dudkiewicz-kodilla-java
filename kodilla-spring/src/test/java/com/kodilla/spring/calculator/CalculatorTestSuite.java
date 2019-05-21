@@ -1,6 +1,5 @@
 package com.kodilla.spring.calculator;
 
-import com.kodilla.spring.library.Library;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
